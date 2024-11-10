@@ -1,0 +1,79 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class CustomInput extends StatelessWidget {
+  final String? hintText;
+  final TextEditingController? controller;
+  final bool obscureText;
+  final TextInputType? keyboardType;
+  final Widget? suffix;
+  final String? Function(String?)? validator;
+
+  const CustomInput({
+    super.key,
+    this.hintText,
+    this.controller,
+    this.obscureText = false,
+    this.keyboardType,
+    this.suffix,
+    this.validator,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          height: 44.h,
+          child: TextFormField(
+            controller: controller,
+            obscureText: obscureText,
+            keyboardType: keyboardType,
+            validator: validator,
+            style: TextStyle(
+              fontFamily: 'SF Pro Text',
+              fontSize: 16.sp,
+              color: Colors.white, // FFFFFF 100%
+              fontWeight: FontWeight.w400,
+            ),
+            decoration: InputDecoration(
+              isDense: true,
+              hintText: hintText,
+              hintStyle: TextStyle(
+                fontFamily: 'SF Pro Text',
+                fontSize: 16.sp,
+                color: Colors.white,
+                fontWeight: FontWeight.w400,
+              ),
+              filled: true,
+              fillColor: const Color(0xFF000000).withOpacity(0.25),
+              // 000000 25%
+              suffixIcon: suffix,
+              contentPadding: EdgeInsets.symmetric(
+                horizontal: 20.w,
+                vertical: 15.h,
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(25.r),
+                borderSide: BorderSide.none,
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(25.r),
+                borderSide: BorderSide.none,
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(25.r),
+                borderSide: BorderSide.none,
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(25.r),
+                borderSide: BorderSide(color: Colors.red),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
