@@ -23,41 +23,43 @@ class SignInScreen extends StatelessWidget {
             ),
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Gap(100.h),
+              Gap(80.h),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
                 child: AutoSizeText(
                   'share luxurious\nexperiences',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 50.sp,
-                    // Original design spec
+                    fontSize: 40.sp,
                     fontFamily: 'Bodoni 72',
                     fontWeight: FontWeight.w400,
                     height: 1.1,
+                    letterSpacing: -0.5,
                   ),
                   maxLines: 2,
                   textAlign: TextAlign.left,
                 ),
               ),
               const Spacer(),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: const SignInWithAppleButton(),
-              ),
-              Gap(16.h),
-              Text(
-                'By continuing you agree to all T&C',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 13.sp,
-                  fontFamily: 'SF Pro Text',
-                  fontWeight: FontWeight.w400,
+              const SignInWithAppleButton(),
+              Gap(12.h),
+              Center(
+                child: Text(
+                  'By continuing you agree to all T&C',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 11.sp,
+                    fontFamily: 'SF Pro Text',
+                    fontWeight: FontWeight.w400,
+                    letterSpacing: -0.2,
+                  ),
                 ),
               ),
-              Gap(24.h),
+              Gap(20.h),
             ],
           ),
         ),

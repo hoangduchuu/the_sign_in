@@ -10,46 +10,48 @@ class SignInWithAppleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Calculate heights based on original proportions
-    final buttonHeight = 0.067.sh; // 60/896 of screen height
-    final iconWidth = 0.039.sw; // 16.23/414 of screen width
-    final iconHeight = 0.022.sh; // 20/896 of screen height
-
-    return GestureDetector(
-      onTap: () {
-        AppNavigators.gotoPreferenceSetting();
-      },
-      child: Container(
-        width: 374.w,
-        height: buttonHeight,
-        clipBehavior: Clip.antiAlias,
-        decoration: ShapeDecoration(
-          color: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30.r),
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
+      child: SizedBox(
+        width: double.infinity,  // Fill available width within padding
+        height: 44.h,  // Standard iOS button height
+        child: ElevatedButton(
+          onPressed: () {
+            AppNavigators.gotoPreferenceSetting();
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.black,
+            elevation: 0,
+            padding: EdgeInsets.zero,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(22.r), // Half of height
+            ),
           ),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SvgPicture.asset(
-              Assets.iconsApple,
-              width: iconWidth,
-              height: iconHeight,
-            ),
-            Gap(10.w),
-            Text(
-              'Sign in with Apple',
-              style: TextStyle(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SvgPicture.asset(
+                Assets.iconsApple,
+                width: 16.w,
+                height: 16.h,  // Adjusted to match iOS
                 color: Colors.black,
-                fontSize: 18.sp,
-                fontFamily: 'SF Pro Text',
-                fontWeight: FontWeight.w500,
               ),
-            ),
-          ],
+              SizedBox(width: 6.w),
+              Text(
+                'Sign in with Apple',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 15.sp,  // iOS standard font size
+                  fontFamily: 'SF Pro Text',  // Exact iOS font
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: -0.24,
+                  height: 1.0,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
