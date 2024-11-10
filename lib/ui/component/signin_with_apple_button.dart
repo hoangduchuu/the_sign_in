@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:the_sign_in/generated/assets.dart';
+import 'package:the_sign_in/routes/app_navigators.dart';
 
 class SignInWithAppleButton extends StatelessWidget {
   const SignInWithAppleButton({super.key});
@@ -14,37 +15,42 @@ class SignInWithAppleButton extends StatelessWidget {
     final iconWidth = 0.039.sw; // 16.23/414 of screen width
     final iconHeight = 0.022.sh; // 20/896 of screen height
 
-    return Container(
-      width: 374.w,
-      height: buttonHeight,
-      clipBehavior: Clip.antiAlias,
-      decoration: ShapeDecoration(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.r),
+    return GestureDetector(
+      onTap: () {
+        AppNavigators.gotoPreferenceSetting();
+      },
+      child: Container(
+        width: 374.w,
+        height: buttonHeight,
+        clipBehavior: Clip.antiAlias,
+        decoration: ShapeDecoration(
+          color: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.r),
+          ),
         ),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SvgPicture.asset(
-            Assets.iconsApple,
-            width: iconWidth,
-            height: iconHeight,
-          ),
-          Gap(10.w),
-          Text(
-            'Sign in with Apple',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 18.sp,
-              fontFamily: 'SF Pro Text',
-              fontWeight: FontWeight.w500,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              Assets.iconsApple,
+              width: iconWidth,
+              height: iconHeight,
             ),
-          ),
-        ],
+            Gap(10.w),
+            Text(
+              'Sign in with Apple',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 18.sp,
+                fontFamily: 'SF Pro Text',
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
