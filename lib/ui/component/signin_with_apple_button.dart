@@ -45,7 +45,7 @@ class SignInWithAppleButton extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 15.sp,  // iOS standard font size
-                  fontFamily: 'SF Pro Text',  // Exact iOS font
+                  fontFamily: 'SFProText',  // Exact iOS font
                   fontWeight: FontWeight.w500,
                   letterSpacing: -0.24,
                   height: 1.0,

@@ -34,7 +34,7 @@ class SignInScreen extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 40.sp,
-                    fontFamily: 'Bodoni 72',
+                    fontFamily: 'Bodoni72',
                     fontWeight: FontWeight.w400,
                     height: 1.1,
                     letterSpacing: -0.5,
@@ -53,7 +53,7 @@ class SignInScreen extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 11.sp,
-                    fontFamily: 'SF Pro Text',
+                    fontFamily: 'SFProText',
                     fontWeight: FontWeight.w400,
                     letterSpacing: -0.2,
                   ),

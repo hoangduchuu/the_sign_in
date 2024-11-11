@@ -32,7 +32,7 @@ class CustomInput extends StatelessWidget {
             keyboardType: keyboardType,
             validator: validator,
             style: TextStyle(
-              fontFamily: 'SF Pro Text',
+              fontFamily: 'SFProText',
               fontSize: 16.sp,
               color: Colors.white, // FFFFFF 100%
               fontWeight: FontWeight.w400,
@@ -41,7 +41,7 @@ class CustomInput extends StatelessWidget {
               isDense: true,
               hintText: hintText,
               hintStyle: TextStyle(
-                fontFamily: 'SF Pro Text',
+                fontFamily: 'SFProText',
                 fontSize: 16.sp,
                 color: Colors.white,
                 fontWeight: FontWeight.w400,

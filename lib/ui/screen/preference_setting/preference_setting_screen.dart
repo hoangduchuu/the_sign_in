@@ -28,7 +28,7 @@ class PreferenceSettingScreen extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 40.sp,
-                  fontFamily: 'Bodoni 72',
+                  fontFamily: 'Bodoni72',
                   fontWeight: FontWeight.w400,
                 ),
                 maxLines: 2,
@@ -42,7 +42,7 @@ class PreferenceSettingScreen extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16.sp,
-                    fontFamily: 'SF Pro Text',
+                    fontFamily: 'SFProText',
                     fontWeight: FontWeight.w500,
                   ),
                   textAlign: TextAlign.start,
@@ -63,7 +63,7 @@ class PreferenceSettingScreen extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16.sp,
-                    fontFamily: 'SF Pro Text',
+                    fontFamily: 'SFProText',
                     fontWeight: FontWeight.w500,
                   ),
                   textAlign: TextAlign.start,
@@ -82,7 +82,7 @@ class PreferenceSettingScreen extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14.sp,
-                      fontFamily: 'SF Pro Text',
+                      fontFamily: 'SFProText',
                       fontWeight: FontWeight.w400,
                     ),
                     maxLines: 2,

@@ -39,7 +39,7 @@ class _InvitePreferencesSectionState extends State<InvitePreferencesSection> {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16.sp,
-                        fontFamily: 'SF Pro Text',
+                        fontFamily: 'SFProText',
                         fontWeight: FontWeight.w400,
                       ),
                     ),

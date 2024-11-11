@@ -26,7 +26,7 @@ class RealPictureSuggestionScreen extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 40.sp,
-                  fontFamily: 'Bodoni 72',
+                  fontFamily: 'Bodoni72',
                   fontWeight: FontWeight.w400,
                 ),
                 maxLines: 2,
@@ -41,7 +41,7 @@ class RealPictureSuggestionScreen extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14.sp,
-                      fontFamily: 'SF Pro Text',
+                      fontFamily: 'SFProText',
                       fontWeight: FontWeight.w400,
                     ),
                     maxLines: 2,
@@ -58,7 +58,7 @@ class RealPictureSuggestionScreen extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14.sp,
-                        fontFamily: 'SF Pro Text',
+                        fontFamily: 'SFProText',
                         fontWeight: FontWeight.w400,
                       ),
                       maxLines: 1,

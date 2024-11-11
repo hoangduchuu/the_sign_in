@@ -26,7 +26,7 @@ class UsernameInputScreen extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 40.sp,
-                  fontFamily: 'Bodoni 72',
+                  fontFamily: 'Bodoni72',
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -47,7 +47,7 @@ class UsernameInputScreen extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,
-                      fontFamily: 'SF Pro Text',
+                      fontFamily: 'SFProText',
                       fontWeight: FontWeight.w400,
                       height: 0.10,
                     ),

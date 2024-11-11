@@ -87,7 +87,7 @@ flutter:
         - asset: assets/fonts/bodoni72.ttf
           weight: 700
           style: normal
-    - family: SF Pro Text
+    - family: SFProText
       fonts:
         - asset: assets/fonts/sfpro.otf
           weight: 400

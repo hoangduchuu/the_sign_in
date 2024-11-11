@@ -45,7 +45,7 @@ class CustomButton extends StatelessWidget {
                 child: AutoSizeText(
                   text,
                   style: TextStyle(
-                    fontFamily: 'SF Pro Text',
+                    fontFamily: 'SFProText',
                     fontWeight: FontWeight.w600,
                     fontSize: 16.sp,
                     color: Colors.black,
@@ -58,7 +58,7 @@ class CustomButton extends StatelessWidget {
                 child: AutoSizeText(
                   text,
                   style: TextStyle(
-                    fontFamily: 'SF Pro Text',
+                    fontFamily: 'SFProText',
                     fontWeight: FontWeight.w600,
                     fontSize: 16.sp,
                     color: Colors.black,
