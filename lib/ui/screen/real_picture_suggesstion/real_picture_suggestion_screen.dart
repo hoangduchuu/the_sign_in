@@ -16,59 +16,75 @@ class RealPictureSuggestionScreen extends StatelessWidget {
       backgroundColor: Colors.black,
       body: BlurBackground(
         backgroundImage: Assets.imagesBackground,
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20.w),
-          child: Column(
-            children: [
-              Gap(kBottomNavigationBarHeight.h),
-              SizedBox(
-                width: double.infinity,
-                child: AutoSizeText(
-                  'what do you look like,\nEmma?',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 40.sp,
-                    fontFamily: 'Bodoni72',
-                    fontWeight: FontWeight.w400,
-                  ),
-                  maxLines: 2,
-                ),
-              ),
-              Gap(48.h),
-              SizedBox(
-                width: double.infinity,
-                child: Opacity(
-                  opacity: 0.50,
-                  child: AutoSizeText(
-                    'Uploading your picture shows that you’re a real\nperson and will help you get up to 10x more invites',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14.sp,
-                      fontFamily: 'SFProText',
-                      fontWeight: FontWeight.w400,
-                    ),
-                    maxLines: 2,
-                  ),
-                ),
-              ),
-              Gap(40.h),
-              SizedBox(
-                width: double.infinity,
-                child: Opacity(
-                    opacity: 0.50,
-                    child: AutoSizeText(
-                      'You can change this later in your ‘Profile’ section.',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14.sp,
-                        fontFamily: 'SFProText',
-                        fontWeight: FontWeight.w400,
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.w),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Gap(kBottomNavigationBarHeight.h),
+                      SizedBox(
+                        width: double.infinity,
+                        child: AutoSizeText(
+                          'what do you look like,\nEmma?',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40.sp,
+                            fontFamily: 'Bodoni72',
+                            fontWeight: FontWeight.w400,
+                          ),
+                          maxLines: 2,
+                        ),
                       ),
-                      maxLines: 1,
-                    )),
+                      Gap(48.h),
+                      SizedBox(
+                        width: double.infinity,
+                        child: Opacity(
+                          opacity: 0.50,
+                          child: AutoSizeText(
+                            'Uploading your picture shows that you\'re a real\nperson and will help you get up to 10x more invites',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14.sp,
+                              fontFamily: 'SFProText',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            maxLines: 2,
+                          ),
+                        ),
+                      ),
+                      Gap(40.h),
+                      SizedBox(
+                        width: double.infinity,
+                        child: Opacity(
+                          opacity: 0.50,
+                          child: AutoSizeText(
+                            'You can change this later in your \'Profile\' section.',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14.sp,
+                              fontFamily: 'SFProText',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            maxLines: 1,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-              const Spacer(),
-              CustomButton(
+            ),
+            Container(
+              padding: EdgeInsets.only(
+                left: 20.w,
+                right: 20.w,
+                bottom: MediaQuery.of(context).padding.bottom + 24.h,
+              ),
+              child: CustomButton(
                 text: 'Go to camera roll',
                 onPressed: () {
                   Get.dialog(Dialog(
@@ -84,9 +100,8 @@ class RealPictureSuggestionScreen extends StatelessWidget {
                 centerText: true,
                 showArrow: false,
               ),
-              Gap(44.h),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

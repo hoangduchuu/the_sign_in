@@ -66,7 +66,7 @@ class UsernameInputScreen extends StatelessWidget {
                 padding: EdgeInsets.only(
                   left: 20.w,
                   right: 20.w,
-                  bottom: MediaQuery.of(context).padding.bottom + 44.h,
+                  bottom: MediaQuery.of(context).padding.bottom + 24.h,
                 ),
                 child: Row(
                   children: [
