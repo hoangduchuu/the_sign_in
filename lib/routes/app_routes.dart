@@ -15,9 +15,30 @@ class AppRoutes {
 }
 
 var routes = [
-  GetPage(name: AppRoutes.splash, page: () => const SplashScreen(), bindings: [SplashBinding()]),
-  GetPage(name: AppRoutes.signIn, page: () => const SignInScreen()),
-  GetPage(name: AppRoutes.usernameInput, page: () => const UsernameInputScreen()),
-  GetPage(name: AppRoutes.preferenceSetting, page: () => const PreferenceSettingScreen()),
-  GetPage(name: AppRoutes.realPictureSuggestion, page: () => const RealPictureSuggestionScreen()),
+  GetPage(
+    name: AppRoutes.splash,
+    page: () => const SplashScreen(),
+    bindings: [SplashBinding()],
+    transition: Transition.fadeIn,
+  ),
+  GetPage(
+    name: AppRoutes.signIn,
+    page: () => const SignInScreen(),
+    transition: Transition.fadeIn,
+  ),
+  GetPage(
+    name: AppRoutes.usernameInput,
+    page: () => const UsernameInputScreen(),
+    transition: Transition.fadeIn,
+  ),
+  GetPage(
+    name: AppRoutes.preferenceSetting,
+    page: () => const PreferenceSettingScreen(),
+    transition: Transition.fadeIn,
+  ),
+  GetPage(
+    name: AppRoutes.realPictureSuggestion,
+    page: () => const RealPictureSuggestionScreen(),
+    transition: Transition.fadeIn,
+  ),
 ];
