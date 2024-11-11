@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -71,7 +73,7 @@ class RealPictureSuggestionScreen extends StatelessWidget {
               padding: EdgeInsets.only(
                 left: 20.w,
                 right: 20.w,
-                bottom: MediaQuery.of(context).padding.bottom + 24.h,
+                bottom: MediaQuery.of(context).padding.bottom + (Platform.isAndroid ? 24.h : 0),
               ),
               child: CustomButton(
                 text: 'Go to camera roll',

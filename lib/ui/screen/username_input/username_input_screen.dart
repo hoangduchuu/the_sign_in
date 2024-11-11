@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -59,7 +61,7 @@ class UsernameInputScreen extends StatelessWidget {
                 padding: EdgeInsets.only(
                   left: 20.w,
                   right: 20.w,
-                  bottom: MediaQuery.of(context).padding.bottom + 24.h,
+                  bottom: MediaQuery.of(context).padding.bottom + (Platform.isAndroid ? 24.h : 0),
                 ),
                 child: Row(
                   children: [
