@@ -11,7 +11,9 @@ import 'package:the_sign_in/ui/component/custom_input.dart';
 import 'package:the_sign_in/ui/component/header_text.dart';
 
 class UsernameInputScreen extends StatelessWidget {
-  const UsernameInputScreen({super.key});
+  UsernameInputScreen({super.key});
+
+  final TextEditingController nameTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class UsernameInputScreen extends StatelessWidget {
                       Gap(28.h),
                       CustomInput(
                         hintText: 'Your name...',
-                        controller: TextEditingController(),
+                        controller: nameTextController,
                         keyboardType: TextInputType.text,
                       ),
                       Gap(16.h),

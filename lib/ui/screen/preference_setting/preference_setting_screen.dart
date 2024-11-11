@@ -13,7 +13,9 @@ import 'package:the_sign_in/ui/component/header_text.dart';
 import 'package:the_sign_in/ui/screen/preference_setting/widget/invite_preference_checkbox_widget.dart';
 
 class PreferenceSettingScreen extends StatelessWidget {
-  const PreferenceSettingScreen({super.key});
+  PreferenceSettingScreen({super.key});
+
+  final TextEditingController cityTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class PreferenceSettingScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Gap(kBottomNavigationBarHeight.h),
-                      HeaderText(text: 'what are your invite\npreferences?'),
+                      const HeaderText(text: 'what are your invite\npreferences?'),
                       Gap(47.h),
                       Container(
                         padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -57,7 +59,7 @@ class PreferenceSettingScreen extends StatelessWidget {
                           fontFamily: 'SFProText',
                           fontWeight: FontWeight.w500,
                         ),
-                        controller: TextEditingController(),
+                        controller: cityTextController,
                         keyboardType: TextInputType.text,
                       ),
                       Gap(28.h),

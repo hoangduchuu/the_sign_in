@@ -28,12 +28,12 @@ var routes = [
   ),
   GetPage(
     name: AppRoutes.usernameInput,
-    page: () => const UsernameInputScreen(),
+    page: () => UsernameInputScreen(),
     transition: Transition.fadeIn,
   ),
   GetPage(
     name: AppRoutes.preferenceSetting,
-    page: () => const PreferenceSettingScreen(),
+    page: () => PreferenceSettingScreen(),
     transition: Transition.fadeIn,
   ),
   GetPage(
