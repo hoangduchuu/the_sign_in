@@ -24,52 +24,61 @@ class BlurBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 1.sw,
-      height: 1.sh,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(backgroundImage),
-          fit: BoxFit.cover,
+    return GestureDetector(
+      behavior: HitTestBehavior.translucent,
+      onTap: () {
+        final FocusScopeNode currentFocus = FocusScope.of(context);
+        if (!currentFocus.hasPrimaryFocus && currentFocus.focusedChild != null) {
+          FocusManager.instance.primaryFocus?.unfocus();
+        }
+      },
+      child: Container(
+        width: 1.sw,
+        height: 1.sh,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(backgroundImage),
+            fit: BoxFit.cover,
+          ),
         ),
-      ),
-      child: Stack(
-        children: [
-          // Blur effect with horizontal gradient
-          BackdropFilter(
-            filter: ImageFilter.blur(
-              sigmaX: blurSigma,
-              sigmaY: blurSigma,
-            ),
-            child: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                  colors: gradientColors.map((color) => color.withOpacity(0.25)).toList(),
-                  stops: gradientStops,
+        child: Stack(
+          children: [
+            // Blur effect with horizontal gradient
+            BackdropFilter(
+              filter: ImageFilter.blur(
+                sigmaX: blurSigma,
+                sigmaY: blurSigma,
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: gradientColors.map((color) => color.withOpacity(0.25)).toList(),
+                    stops: gradientStops,
+                  ),
                 ),
               ),
             ),
-          ),
-          // Vertical gradient overlay
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.black.withOpacity(0.3),
-                  Colors.transparent,
-                  Colors.black.withOpacity(0.2),
-                ],
-                stops: const [0.0, 0.5, 1.0],
+            // Vertical gradient overlay
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.black.withOpacity(0.3),
+                    Colors.transparent,
+                    Colors.black.withOpacity(0.2),
+                  ],
+                  stops: const [0.0, 0.5, 1.0],
+                ),
               ),
             ),
-          ),
-          // Child widget if provided
-          if (child != null) child!,
-        ],
+            // Child widget if provided
+            if (child != null) child!,
+          ],
+        ),
       ),
     );
   }
