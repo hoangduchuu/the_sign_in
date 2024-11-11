@@ -12,7 +12,7 @@ class AppNavigators {
   }
 
   static Future<dynamic>? gotoUserNameInput() {
-    return Get.offAllNamed(AppRoutes.usernameInput);
+    return Get.toNamed(AppRoutes.usernameInput);
   }
 
   static Future<dynamic>? gotoPreferenceSetting() {
@@ -20,6 +20,6 @@ class AppNavigators {
   }
 
   static Future<dynamic>? gotoRealPictureSuggestion() {
-    return Get.offAllNamed(AppRoutes.realPictureSuggestion);
+    return Get.toNamed(AppRoutes.realPictureSuggestion);
   }
 }

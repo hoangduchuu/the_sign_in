@@ -68,7 +68,7 @@ class CustomInput extends StatelessWidget {
               ),
               errorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(25.r),
-                borderSide: BorderSide(color: Colors.red),
+                borderSide: const BorderSide(color: Colors.red),
               ),
             ),
           ),

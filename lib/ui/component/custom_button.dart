@@ -6,12 +6,16 @@ class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback? onPressed;
   final double? width;
+  final bool centerText;
+  final bool showArrow; // Add this parameter
 
   const CustomButton({
     super.key,
     required this.text,
     this.onPressed,
     this.width,
+    this.centerText = false,
+    this.showArrow = true, // Default to true to maintain current behavior
   });
 
   @override
@@ -33,24 +37,48 @@ class CustomButton extends StatelessWidget {
             vertical: 14.h,
           ),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Stack(
           children: [
-            AutoSizeText(
-              text,
-              style: TextStyle(
-                fontFamily: 'SF Pro Text',
-                fontWeight: FontWeight.w600,
-                fontSize: 16.sp,
-                color: Colors.black,
+            // Text - either centered or start-aligned
+            if (centerText)
+              Center(
+                child: AutoSizeText(
+                  text,
+                  style: TextStyle(
+                    fontFamily: 'SF Pro Text',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16.sp,
+                    color: Colors.black,
+                  ),
+                ),
+              )
+            else
+              Align(
+                alignment: Alignment.centerLeft,
+                child: AutoSizeText(
+                  text,
+                  style: TextStyle(
+                    fontFamily: 'SF Pro Text',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16.sp,
+                    color: Colors.black,
+                  ),
+                ),
               ),
-            ),
-            SizedBox(width: 8.w),
-            Icon(
-              Icons.arrow_forward_ios_sharp,
-              size: 14.sp,
-              color: Colors.black,
-            ),
+            // Right-aligned arrow (only if showArrow is true)
+            if (showArrow)
+              Positioned(
+                right: 0,
+                top: 0,
+                bottom: 0,
+                child: Center(
+                  child: Icon(
+                    Icons.arrow_forward_ios_sharp,
+                    size: 14.sp,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
           ],
         ),
       ),

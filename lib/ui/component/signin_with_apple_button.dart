@@ -1,7 +1,8 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gap/gap.dart';
 import 'package:the_sign_in/generated/assets.dart';
 import 'package:the_sign_in/routes/app_navigators.dart';
 
@@ -17,7 +18,7 @@ class SignInWithAppleButton extends StatelessWidget {
         height: 44.h,  // Standard iOS button height
         child: ElevatedButton(
           onPressed: () {
-            AppNavigators.gotoPreferenceSetting();
+            AppNavigators.gotoUserNameInput();
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.white,
