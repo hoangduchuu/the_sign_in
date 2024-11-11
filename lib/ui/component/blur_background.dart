@@ -12,11 +12,11 @@ class BlurBackground extends StatelessWidget {
   const BlurBackground({
     super.key,
     required this.backgroundImage,
-    this.blurSigma = 100,
+    this.blurSigma = 30,
     this.gradientColors = const [
-      Color(0xFF4A4A4A),
-      Color(0xFF846A6A),
-      Color(0xFF6A7C99),
+      Color(0xFF846A6A), // Warmer brown tone
+      Color(0xFF8B7676), // Mid warm tone
+      Color(0xFF6A7C99), // Kee
     ],
     this.gradientStops = const [0.2, 0.6, 1.0],
     this.child,

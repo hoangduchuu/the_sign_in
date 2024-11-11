@@ -8,6 +8,7 @@ class CustomInput extends StatelessWidget {
   final TextInputType? keyboardType;
   final Widget? suffix;
   final String? Function(String?)? validator;
+  final TextStyle? hintStyle;
 
   const CustomInput({
     super.key,
@@ -17,6 +18,7 @@ class CustomInput extends StatelessWidget {
     this.keyboardType,
     this.suffix,
     this.validator,
+    this.hintStyle,
   });
 
   @override
@@ -40,12 +42,13 @@ class CustomInput extends StatelessWidget {
             decoration: InputDecoration(
               isDense: true,
               hintText: hintText,
-              hintStyle: TextStyle(
-                fontFamily: 'SFProText',
-                fontSize: 16.sp,
-                color: Colors.white,
-                fontWeight: FontWeight.w400,
-              ),
+              hintStyle: hintStyle ??
+                  TextStyle(
+                    fontFamily: 'SFProText',
+                    fontSize: 16.sp,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w400,
+                  ),
               filled: true,
               fillColor: const Color(0xFF000000).withOpacity(0.25),
               // 000000 25%
@@ -55,19 +58,19 @@ class CustomInput extends StatelessWidget {
                 vertical: 15.h,
               ),
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25.r),
+                borderRadius: BorderRadius.circular(20.r),
                 borderSide: BorderSide.none,
               ),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25.r),
+                borderRadius: BorderRadius.circular(20.r),
                 borderSide: BorderSide.none,
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25.r),
+                borderRadius: BorderRadius.circular(20.r),
                 borderSide: BorderSide.none,
               ),
               errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25.r),
+                borderRadius: BorderRadius.circular(20.r),
                 borderSide: const BorderSide(color: Colors.red),
               ),
             ),

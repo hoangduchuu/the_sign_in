@@ -37,20 +37,16 @@ class UsernameInputScreen extends StatelessWidget {
                 keyboardType: TextInputType.text,
               ),
               Gap(16.h),
-              const SizedBox(
-                width: 374,
-                child: Opacity(
-                  opacity: 0.50,
-                  child: Text(
-                    'This is the name that will appear on your profile',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontFamily: 'SFProText',
-                      fontWeight: FontWeight.w400,
-                      height: 0.10,
-                    ),
+              const Opacity(
+                opacity: 0.50,
+                child: Text(
+                  'This is the name that will appear on your profile',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontFamily: 'SFProText',
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ),

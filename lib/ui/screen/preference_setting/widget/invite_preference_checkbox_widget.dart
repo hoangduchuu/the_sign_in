@@ -11,8 +11,8 @@ class InvitePreferencesSection extends StatefulWidget {
 
 class _InvitePreferencesSectionState extends State<InvitePreferencesSection> {
   final Map<String, bool> preferences = {
-    'Coffee': false,
-    'Drinks': false,
+    'Coffee': true,
+    'Drinks': true,
     'Dinner': false,
     'Travel': false,
   };
@@ -30,17 +30,20 @@ class _InvitePreferencesSectionState extends State<InvitePreferencesSection> {
             children: [
               Container(
                 height: 44.h,
-                padding: EdgeInsets.only(left: 20.w, right: 8.w), // Fixed padding
+                padding: EdgeInsets.only(left: 20.w), // Fixed padding
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      entry.key,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16.sp,
-                        fontFamily: 'SFProText',
-                        fontWeight: FontWeight.w400,
+                    Opacity(
+                      opacity: entry.value ? 1.0 : 0.5,
+                      child: Text(
+                        entry.key,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16.sp,
+                          fontFamily: 'SFProText',
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                     Transform.scale(

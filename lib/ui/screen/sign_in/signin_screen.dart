@@ -45,17 +45,16 @@ class SignInScreen extends StatelessWidget {
               ),
               const Spacer(),
               const SignInWithAppleButton(),
-              Gap(12.h),
+              Gap(16.h),
               Center(
                 child: Text(
-                  'By continuing you agree to all T&C',
+                  'By continuing you aree to all T&C',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 11.sp,
-                    fontFamily: 'SFProText',
+                    fontFamily: 'SF Pro Text',
                     fontWeight: FontWeight.w400,
-                    letterSpacing: -0.2,
                   ),
                 ),
               ),

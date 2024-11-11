@@ -17,19 +17,22 @@ class RealPictureSuggestionScreen extends StatelessWidget {
       body: BlurBackground(
         backgroundImage: Assets.imagesBackground,
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 40.w),
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: Column(
             children: [
               Gap(kBottomNavigationBarHeight.h),
-              AutoSizeText(
-                'what do you look like,\nEmma?',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 40.sp,
-                  fontFamily: 'Bodoni72',
-                  fontWeight: FontWeight.w400,
+              SizedBox(
+                width: double.infinity,
+                child: AutoSizeText(
+                  'what do you look like,\nEmma?',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 40.sp,
+                    fontFamily: 'Bodoni72',
+                    fontWeight: FontWeight.w400,
+                  ),
+                  maxLines: 2,
                 ),
-                maxLines: 2,
               ),
               Gap(48.h),
               SizedBox(
