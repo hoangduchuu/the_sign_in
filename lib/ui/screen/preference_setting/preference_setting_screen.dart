@@ -7,6 +7,7 @@ import 'package:the_sign_in/routes/app_navigators.dart';
 import 'package:the_sign_in/ui/component/blur_background.dart';
 import 'package:the_sign_in/ui/component/custom_button.dart';
 import 'package:the_sign_in/ui/component/custom_input.dart';
+import 'package:the_sign_in/ui/component/header_text.dart';
 import 'package:the_sign_in/ui/screen/preference_setting/widget/invite_preference_checkbox_widget.dart';
 
 class PreferenceSettingScreen extends StatelessWidget {
@@ -29,19 +30,7 @@ class PreferenceSettingScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Gap(kBottomNavigationBarHeight.h),
-                      SizedBox(
-                        width: double.infinity,
-                        child: AutoSizeText(
-                          'what are your invite\npreferences?',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 40.sp,
-                            fontFamily: 'Bodoni72',
-                            fontWeight: FontWeight.w400,
-                          ),
-                          maxLines: 2,
-                        ),
-                      ),
+                      HeaderText(text: 'what are your invite\npreferences?'),
                       Gap(47.h),
                       Container(
                         padding: EdgeInsets.symmetric(horizontal: 20.w),

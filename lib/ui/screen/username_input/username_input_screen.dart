@@ -6,6 +6,7 @@ import 'package:the_sign_in/routes/app_navigators.dart';
 import 'package:the_sign_in/ui/component/blur_background.dart';
 import 'package:the_sign_in/ui/component/custom_button.dart';
 import 'package:the_sign_in/ui/component/custom_input.dart';
+import 'package:the_sign_in/ui/component/header_text.dart';
 
 class UsernameInputScreen extends StatelessWidget {
   const UsernameInputScreen({super.key});
@@ -25,17 +26,9 @@ class UsernameInputScreen extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20.w),
                   child: Column(
-                    children: [
+                    children: <Widget>[
                       Gap(kBottomNavigationBarHeight.h),
-                      Text(
-                        'what should we call you?',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 40.sp,
-                          fontFamily: 'Bodoni72',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
+                      const HeaderText(text: 'what should we call\nyou?'),
                       Gap(28.h),
                       CustomInput(
                         hintText: 'Your name...',

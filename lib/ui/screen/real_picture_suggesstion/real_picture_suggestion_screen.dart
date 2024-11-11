@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:the_sign_in/generated/assets.dart';
 import 'package:the_sign_in/ui/component/blur_background.dart';
 import 'package:the_sign_in/ui/component/custom_button.dart';
+import 'package:the_sign_in/ui/component/header_text.dart';
 
 class RealPictureSuggestionScreen extends StatelessWidget {
   const RealPictureSuggestionScreen({super.key});
@@ -26,19 +27,7 @@ class RealPictureSuggestionScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Gap(kBottomNavigationBarHeight.h),
-                      SizedBox(
-                        width: double.infinity,
-                        child: AutoSizeText(
-                          'what do you look like,\nEmma?',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 40.sp,
-                            fontFamily: 'Bodoni72',
-                            fontWeight: FontWeight.w400,
-                          ),
-                          maxLines: 2,
-                        ),
-                      ),
+                      const HeaderText(text: 'what do you look like,\nEmma?'),
                       Gap(48.h),
                       SizedBox(
                         width: double.infinity,
