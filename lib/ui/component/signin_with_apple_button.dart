@@ -15,7 +15,7 @@ class SignInWithAppleButton extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: SizedBox(
         width: double.infinity,  // Fill available width within padding
-        height: 44.h,  // Standard iOS button height
+        height: 60.h,  // Standard iOS button height
         child: ElevatedButton(
           onPressed: () {
             AppNavigators.gotoUserNameInput();
@@ -35,8 +35,8 @@ class SignInWithAppleButton extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 Assets.iconsApple,
-                width: 16.w,
-                height: 16.h,  // Adjusted to match iOS
+                width: 16.23.w,
+                height: 20.h,  // Adjusted to match iOS
                 color: Colors.black,
               ),
               SizedBox(width: 6.w),
@@ -44,11 +44,10 @@ class SignInWithAppleButton extends StatelessWidget {
                 'Sign in with Apple',
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 15.sp,  // iOS standard font size
+                  fontSize: 18.sp,  // iOS standard font size
                   fontFamily: 'SFProText',  // Exact iOS font
                   fontWeight: FontWeight.w500,
-                  letterSpacing: -0.24,
-                  height: 1.0,
+                  height: 0.07,
                 ),
               ),
             ],

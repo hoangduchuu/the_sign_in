@@ -14,33 +14,30 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // Wrap GetMaterialApp with ScreenUtilInit
     return ScreenUtilInit(
-      // Design size from Figma or other design tools
-      designSize: const Size(414, 896),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (context, child) {
-        return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-            useMaterial3: true,
-            // Apply screen util to text theme
-            textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
-          ),
-          getPages: routes,
-          initialRoute: AppRoutes.splash,
-          builder: (context, widget) {
-            // Apply font scaling
-            ScreenUtil.init(context);
-            return MediaQuery(
-              // Prevent system scaling
-              data: MediaQuery.of(context),
-              child: widget!,
-            );
-          },
-        );
-      },
-    );
+        designSize: const Size(414, 896),
+        minTextAdapt: true,
+        splitScreenMode: false,
+        rebuildFactor: (_, __) => true,
+        builder: (context, child) {
+          return GetMaterialApp(
+            builder: (context, child) {
+              return MediaQuery(
+                data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+                child: child!,
+              );
+            },
+            theme: ThemeData(
+              colorScheme: const ColorScheme.light(),
+              visualDensity: VisualDensity.adaptivePlatformDensity,
+            ),
+            debugShowCheckedModeBanner: false,
+            // localizationsDelegates: [
+            //   GlobalMaterialLocalizations.delegate,
+            //   MonthYearPickerLocalizations.delegate,
+            // ],
+            getPages: routes,
+            initialRoute: AppRoutes.splash,
+          );
+        });
   }
 }

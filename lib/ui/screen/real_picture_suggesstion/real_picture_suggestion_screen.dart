@@ -1,11 +1,8 @@
-import 'dart:io';
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:the_sign_in/generated/assets.dart';
 import 'package:the_sign_in/ui/component/blur_background.dart';
 import 'package:the_sign_in/ui/component/custom_button.dart';
 import 'package:the_sign_in/ui/component/header_text.dart';
@@ -18,7 +15,6 @@ class RealPictureSuggestionScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       body: BlurBackground(
-        backgroundImage: Assets.imagesBackground,
         child: Column(
           children: [
             Expanded(
@@ -28,39 +24,45 @@ class RealPictureSuggestionScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Gap(kBottomNavigationBarHeight.h),
+                      Gap(60.h),
                       const HeaderText(text: 'what do you look like,\nEmma?'),
                       Gap(48.h),
-                      SizedBox(
-                        width: double.infinity,
-                        child: Opacity(
-                          opacity: 0.50,
-                          child: AutoSizeText(
-                            'Uploading your picture shows that you\'re a real\nperson and will help you get up to 10x more invites',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14.sp,
-                              fontFamily: 'SFProText',
-                              fontWeight: FontWeight.w400,
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 20.w),
+                        child: SizedBox(
+                          width: double.infinity,
+                          child: Opacity(
+                            opacity: 0.50,
+                            child: AutoSizeText(
+                              'Uploading your picture shows that you\'re a real\nperson and will help you get up to 10x more invites',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14.sp,
+                                fontFamily: 'SFProText',
+                                fontWeight: FontWeight.w400,
+                              ),
+                              maxLines: 2,
                             ),
-                            maxLines: 2,
                           ),
                         ),
                       ),
                       Gap(40.h),
-                      SizedBox(
-                        width: double.infinity,
-                        child: Opacity(
-                          opacity: 0.50,
-                          child: AutoSizeText(
-                            'You can change this later in your \'Profile\' section.',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14.sp,
-                              fontFamily: 'SFProText',
-                              fontWeight: FontWeight.w400,
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 20.w),
+                        child: SizedBox(
+                          width: double.infinity,
+                          child: Opacity(
+                            opacity: 0.50,
+                            child: AutoSizeText(
+                              'You can change this later in your \'Profile\' section.',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14.sp,
+                                fontFamily: 'SFProText',
+                                fontWeight: FontWeight.w400,
+                              ),
+                              maxLines: 1,
                             ),
-                            maxLines: 1,
                           ),
                         ),
                       ),
@@ -73,7 +75,7 @@ class RealPictureSuggestionScreen extends StatelessWidget {
               padding: EdgeInsets.only(
                 left: 20.w,
                 right: 20.w,
-                bottom: MediaQuery.of(context).padding.bottom + (Platform.isAndroid ? 24.h : 0),
+                bottom: 50.h,
               ),
               child: CustomButton(
                 text: 'Go to camera roll',

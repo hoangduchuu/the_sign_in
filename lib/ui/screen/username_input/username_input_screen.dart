@@ -1,9 +1,6 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-import 'package:the_sign_in/generated/assets.dart';
 import 'package:the_sign_in/routes/app_navigators.dart';
 import 'package:the_sign_in/ui/component/blur_background.dart';
 import 'package:the_sign_in/ui/component/custom_button.dart';
@@ -22,7 +19,6 @@ class UsernameInputScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       body: BlurBackground(
-        backgroundImage: Assets.imagesBackground,
         child: Column(
           children: [
             Expanded(
@@ -31,7 +27,7 @@ class UsernameInputScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20.w),
                   child: Column(
                     children: <Widget>[
-                      Gap(kBottomNavigationBarHeight.h),
+                      Gap(60.h),
                       const HeaderText(text: 'what should we call\nyou?'),
                       Gap(28.h),
                       CustomInput(
@@ -39,7 +35,7 @@ class UsernameInputScreen extends StatelessWidget {
                         controller: nameTextController,
                         keyboardType: TextInputType.text,
                       ),
-                      Gap(16.h),
+                      Gap(8.h),
                       const Opacity(
                         opacity: 0.50,
                         child: Text(
@@ -63,7 +59,7 @@ class UsernameInputScreen extends StatelessWidget {
                 padding: EdgeInsets.only(
                   left: 20.w,
                   right: 20.w,
-                  bottom: MediaQuery.of(context).padding.bottom + (Platform.isAndroid ? 24.h : 0),
+                  bottom: 50.h,
                 ),
                 child: Row(
                   children: [

@@ -27,7 +27,7 @@ class CustomInput extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          height: 44.h,
+          height: 60.h,
           child: TextFormField(
             controller: controller,
             obscureText: obscureText,
@@ -55,7 +55,7 @@ class CustomInput extends StatelessWidget {
               suffixIcon: suffix,
               contentPadding: EdgeInsets.symmetric(
                 horizontal: 20.w,
-                vertical: 15.h,
+                vertical: 19.h,
               ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20.r),

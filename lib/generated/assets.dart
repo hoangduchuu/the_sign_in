@@ -6,5 +6,6 @@ class Assets {
   static const String fontsSfpro = 'assets/fonts/sfpro.otf';
   static const String iconsApple = 'assets/icons/apple.svg';
   static const String imagesBackground = 'assets/images/background.png';
+  static const String imagesBlurBackground = 'assets/images/blur_background.png';
 
 }

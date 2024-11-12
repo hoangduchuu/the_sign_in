@@ -29,7 +29,7 @@ class _InvitePreferencesSectionState extends State<InvitePreferencesSection> {
           return Column(
             children: [
               Container(
-                height: 44.h,
+                height: 60.h,
                 padding: EdgeInsets.only(left: 20.w), // Fixed padding
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,7 +47,7 @@ class _InvitePreferencesSectionState extends State<InvitePreferencesSection> {
                       ),
                     ),
                     Transform.scale(
-                      scale: 0.5,
+                      scale: 0.6,
                       child: MediaQuery.removePadding(
                         context: context,
                         child: CupertinoSwitch(

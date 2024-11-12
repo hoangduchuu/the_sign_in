@@ -10,57 +10,53 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      bottom: false,
-      child: Scaffold(
-        body: Container(
-          width: 1.sw,
-          height: 1.sh,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(Assets.imagesBackground),
-              fit: BoxFit.cover,
+    return Scaffold(
+      body: Container(
+        width: 1.sw,
+        height: 1.sh,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(Assets.imagesBackground),
+            fit: BoxFit.cover,
+            scale: 1.4
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Gap(100.h),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 40.w),
+              child: AutoSizeText(
+                'share luxurious\nexperiences',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40.sp,
+                  fontFamily: 'Bodoni72',
+                  fontWeight: FontWeight.w400,
+                  height: 1.1,
+                ),
+                maxLines: 2,
+                textAlign: TextAlign.left,
+              ),
             ),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Gap(80.h),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: AutoSizeText(
-                  'share luxurious\nexperiences',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 40.sp,
-                    fontFamily: 'Bodoni72',
-                    fontWeight: FontWeight.w400,
-                    height: 1.1,
-                    letterSpacing: -0.5,
-                  ),
-                  maxLines: 2,
-                  textAlign: TextAlign.left,
+            const Spacer(),
+            const SignInWithAppleButton(),
+            Gap(16.h),
+            const Center(
+              child: Text(
+                'By continuing you agree to all T&C',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontFamily: 'SFProText',
                 ),
               ),
-              const Spacer(),
-              const SignInWithAppleButton(),
-              Gap(16.h),
-              Center(
-                child: Text(
-                  'By continuing you aree to all T&C',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 11.sp,
-                    fontFamily: 'SF Pro Text',
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ),
-              Gap(20.h),
-            ],
-          ),
+            ),
+            Gap(24.h),
+          ],
         ),
       ),
     );

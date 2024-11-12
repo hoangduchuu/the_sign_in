@@ -12,19 +12,22 @@ class HeaderText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: AutoSizeText(
-        text,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 40.sp,
-          fontFamily: 'Bodoni72',
-          fontWeight: FontWeight.w400,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.w),
+      child: SizedBox(
+        width: double.infinity,
+        child: AutoSizeText(
+          text,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 40.sp,
+            fontFamily: 'Bodoni72',
+            fontWeight: FontWeight.w400,
+          ),
+          maxLines: 2,
+          minFontSize: 32.sp.toInt().toDouble(),
+          stepGranularity: 1,
         ),
-        maxLines: 2,
-        minFontSize: 32.sp.toInt().toDouble(),
-        stepGranularity: 1,
       ),
     );
   }

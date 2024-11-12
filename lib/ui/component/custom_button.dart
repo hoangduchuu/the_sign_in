@@ -22,7 +22,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width ?? double.infinity,
-      height: 44.h,
+      height: 60.h,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -46,7 +46,7 @@ class CustomButton extends StatelessWidget {
                   text,
                   style: TextStyle(
                     fontFamily: 'SFProText',
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w500,
                     fontSize: 16.sp,
                     color: Colors.black,
                   ),
@@ -59,7 +59,7 @@ class CustomButton extends StatelessWidget {
                   text,
                   style: TextStyle(
                     fontFamily: 'SFProText',
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w500,
                     fontSize: 16.sp,
                     color: Colors.black,
                   ),
