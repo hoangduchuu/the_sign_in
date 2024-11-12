@@ -26,7 +26,7 @@ class SignInWithAppleButton extends StatelessWidget {
             elevation: 0,
             padding: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(22.r), // Half of height
+              borderRadius: BorderRadius.circular(30.r), // Half of height
             ),
           ),
           child: Row(

@@ -30,12 +30,9 @@ class CustomButton extends StatelessWidget {
           foregroundColor: Colors.black,
           elevation: 0,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25.r),
+            borderRadius: BorderRadius.circular(60.r),
           ),
-          padding: EdgeInsets.symmetric(
-            horizontal: 16.w,
-            vertical: 14.h,
-          ),
+          padding: EdgeInsets.symmetric(horizontal: 24.w),
         ),
         child: Stack(
           children: [
