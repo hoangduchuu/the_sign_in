@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:the_sign_in/generated/assets.dart';
 import 'package:the_sign_in/routes/app_navigators.dart';
 
@@ -14,8 +15,8 @@ class SignInWithAppleButton extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: SizedBox(
-        width: double.infinity,  // Fill available width within padding
-        height: 60.h,  // Standard iOS button height
+        width: double.infinity, // Fill available width within padding
+        height: 60.h, // Standard iOS button height
         child: ElevatedButton(
           onPressed: () {
             AppNavigators.gotoUserNameInput();
@@ -36,18 +37,19 @@ class SignInWithAppleButton extends StatelessWidget {
               SvgPicture.asset(
                 Assets.iconsApple,
                 width: 16.23.w,
-                height: 20.h,  // Adjusted to match iOS
+                height: 20.h, // Adjusted to match iOS
                 color: Colors.black,
               ),
-              SizedBox(width: 6.w),
+              Gap(10.w),
               Text(
                 'Sign in with Apple',
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 18.sp,  // iOS standard font size
-                  fontFamily: 'SFProText',  // Exact iOS font
+                  fontSize: 18.sp,
+                  fontFamily: 'SFProText',
                   fontWeight: FontWeight.w500,
-                  height: 0.07,
+                  letterSpacing: 1.3,
+                  height: 1.0,
                 ),
               ),
             ],

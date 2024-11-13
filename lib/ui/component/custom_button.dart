@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:the_sign_in/generated/assets.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -32,7 +34,7 @@ class CustomButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(60.r),
           ),
-          padding: EdgeInsets.symmetric(horizontal: 24.w),
+          padding: centerText != true ? EdgeInsets.only(left: 24.w, right: 20.w) : null,
         ),
         child: Stack(
           children: [
@@ -46,6 +48,8 @@ class CustomButton extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     fontSize: 16.sp,
                     color: Colors.black,
+                    letterSpacing: 1.1,
+                    height: 1.0,
                   ),
                 ),
               )
@@ -59,6 +63,8 @@ class CustomButton extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     fontSize: 16.sp,
                     color: Colors.black,
+                    letterSpacing: 1.1,
+                    height: 1.0,
                   ),
                 ),
               ),
@@ -66,14 +72,12 @@ class CustomButton extends StatelessWidget {
             if (showArrow)
               Positioned(
                 right: 0,
-                top: 0,
-                bottom: 0,
-                child: Center(
-                  child: Icon(
-                    Icons.arrow_forward_ios_sharp,
-                    size: 14.sp,
-                    color: Colors.black,
-                  ),
+                top: 0.h,
+                bottom: 0.h,
+                child: SvgPicture.asset(
+                  Assets.iconsArrowNext,
+                  width: 8.50.w,
+                  height: 14.h,
                 ),
               ),
           ],

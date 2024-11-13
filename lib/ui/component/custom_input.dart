@@ -48,6 +48,7 @@ class CustomInput extends StatelessWidget {
                     fontSize: 16.sp,
                     color: Colors.white,
                     fontWeight: FontWeight.w400,
+                    letterSpacing: 1.15,
                   ),
               filled: true,
               fillColor: const Color(0xFF000000).withOpacity(0.25),

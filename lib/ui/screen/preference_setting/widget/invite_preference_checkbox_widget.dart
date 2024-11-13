@@ -43,23 +43,31 @@ class _InvitePreferencesSectionState extends State<InvitePreferencesSection> {
                           fontSize: 16.sp,
                           fontFamily: 'SFProText',
                           fontWeight: FontWeight.w400,
+                          letterSpacing: 1.2,
+                          height: 0.84,
                         ),
                       ),
                     ),
-                    Transform.scale(
-                      scale: 0.6,
-                      child: MediaQuery.removePadding(
-                        context: context,
-                        child: CupertinoSwitch(
-                          value: entry.value,
-                          onChanged: (bool value) {
-                            setState(() {
-                              preferences[entry.key] = value;
-                            });
-                          },
-                          activeColor: const Color(0xFFACACAC),
-                          trackColor: Colors.white.withOpacity(0.15),
-                          thumbColor: Colors.white,
+                    Container(
+                      margin: EdgeInsets.only(
+                        right: 9.5.w,
+                        top: 4.h,
+                      ), // Fixed padding
+                      child: Transform.scale(
+                        scale: 0.65,
+                        child: MediaQuery.removePadding(
+                          context: context,
+                          child: CupertinoSwitch(
+                            value: entry.value,
+                            onChanged: (bool value) {
+                              setState(() {
+                                preferences[entry.key] = value;
+                              });
+                            },
+                            activeColor: const Color(0xFFACACAC),
+                            trackColor: Colors.white.withOpacity(0.15),
+                            thumbColor: Colors.white,
+                          ),
                         ),
                       ),
                     ),

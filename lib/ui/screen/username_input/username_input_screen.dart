@@ -46,6 +46,8 @@ class UsernameInputScreen extends StatelessWidget {
                             fontSize: 14.sp,
                             fontFamily: 'SFProText',
                             fontWeight: FontWeight.w400,
+                            letterSpacing: 0.9,
+                            height: 1.2,
                           ),
                         ),
                       ),
